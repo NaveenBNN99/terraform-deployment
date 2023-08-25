@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: online-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: online-app  # Corrected the label to match template labels
+  template:
+    metadata:
+      labels:
+        app: online-app
+    spec:
+      containers:
+        - name: online-app  # Corrected container name
+          image: 047259088519.dkr.ecr.us-east-1.amazonaws.com/online_exam:latest
+          ports:
+            - containerPort: 8080
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: online-service
+spec:
+  selector:
+    app: online-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080 
+  type: LoadBalancer
