@@ -10,9 +10,9 @@ variable "region" {
 
 variable "secret_key" {
     type = string
-    default = "mrXZ50gmM5trJHY702vcAYv4vB4VCHLb3mUtbjtK"*/
+    default = "mrXZ50gmM5trJHY702vcAYv4vB4VCHLb3mUtbjtK"
   
-}
+}*/
 variable "vpc_cidr_block" {}
 variable "subnet_cidr_block" {}
 variable "avail_zone" {}
