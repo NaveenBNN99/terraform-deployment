@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: online-app  # Corrected container name
-          image: 047259088519.dkr.ecr.us-east-1.amazonaws.com/online_exam:latest
+          image: 967432970863.dkr.ecr.us-east-1.amazonaws.com/online-exam:latest
           ports:
             - containerPort: 8080
 
