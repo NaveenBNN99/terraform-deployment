@@ -30,7 +30,7 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: db-credentials
-                  key: secret/db-credentials created
+                  key: admin123
       imagePullSecrets:
         - name: regcred
 
