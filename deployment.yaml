@@ -17,7 +17,7 @@ spec:
           image: 967432970863.dkr.ecr.us-east-1.amazonaws.com/online-exam:latest
           ports:
             - containerPort: 8080
-          env:
+         /*  env:
             - name: DB_HOST
               value: database-1.ckhxbf4wuzkc.us-east-1.rds.amazonaws.com
             - name: DB_PORT
@@ -33,7 +33,7 @@ spec:
                   key:  password
       imagePullSecrets:
         - name: regcred
-
+*/
 ---
 apiVersion: v1
 kind: Service
