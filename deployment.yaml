@@ -6,17 +6,17 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: online-app  # Corrected the label to match template labels
+      app: online-app  
   template:
     metadata:
       labels:
         app: online-app
     spec:
       containers:
-        - name: online-app  # Corrected container name
+        - name: online-app  
           image: 967432970863.dkr.ecr.us-east-1.amazonaws.com/online-exam:latest
           ports:
-            - containerPort: 8080
+            - containerPort: 5432
           env:
             - name: DB_HOST
               value: database-1.ckhxbf4wuzkc.us-east-1.rds.amazonaws.com
@@ -25,7 +25,7 @@ spec:
             - name: DB_NAME
               value: onlineexam
             - name: DB_USER
-              value: postgres
+              value: username
             - name: DB_PASSWORD
               valueFrom:
                 secretKeyRef:
