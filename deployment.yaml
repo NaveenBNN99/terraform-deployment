@@ -16,7 +16,7 @@ spec:
         - name: online-app  # Corrected container name
           image: 967432970863.dkr.ecr.us-east-1.amazonaws.com/online-exam:latest
           ports:
-            - containerPort: 5432
+            - containerPort: 8080
           env:
             - name: DB_HOST
               value: database-1.ckhxbf4wuzkc.us-east-1.rds.amazonaws.com
