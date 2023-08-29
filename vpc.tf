@@ -24,7 +24,7 @@ resource "aws_default_route_table" "main-rtb" {
 }
 
 resource "aws_default_security_group" "default-sg" {
-  vpc_id = "vpc-01b15407fe957f41c"
+  vpc_id = "vpc-04bb19fbdabd9f5ce"
   ingress {
     from_port   = 80
     to_port     = 80
