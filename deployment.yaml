@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: online-app  
-          image: 494043708686.dkr.ecr.us-east-1.amazonaws.com/online-exam
+          image: 494043708686.dkr.ecr.us-east-1.amazonaws.com/online-exam:latest
           ports:
             - containerPort: 5432
           env:
