@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: online-app
+  name: online-app-deployment
 spec:
   replicas: 1
   selector:
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: online-app  
-          image: 494043708686.dkr.ecr.us-east-1.amazonaws.com/online-exam:latest
+          image: 494043708686.dkr.ecr.us-east-1.amazonaws.com/online-exam
           ports:
             - containerPort: 5432
           env:
@@ -38,7 +38,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: online-service
+  name: online-app-service
 spec:
   selector:
     app: online-app
